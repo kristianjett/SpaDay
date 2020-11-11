@@ -69,3 +69,32 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+#squareBox {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 4em;
+}
+
+.polishSquare{
+    border: 1px solid black;
+    padding: 60px;
+    max-width: 60px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: Green;
+}
+
+.orange{
+    background-color: Orange;
+}
+
+.pink{
+    background-color: Pink;
+}
+

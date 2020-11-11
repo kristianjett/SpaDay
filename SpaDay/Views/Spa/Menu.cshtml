@@ -10,17 +10,41 @@
 
 <h1>Fancy Spa</h1>
 <div id="clientProfile">
+    <h3>Client Profile</h3>
+    <p>@ViewBag.name</p>
 </div>
 <div id="servicesMenu">
 
     <h5>Facial Treatments</h5>
-    <p>Your //TODO: pass the skintype value in here// skin type is best suited to the follow facial types:</p>
+    <p>Your @ViewBag.Skintype skin type is best suited to the follow facial types:</p>
     
     <ul>
-        //TODO: iterate through appropriate facial treatments
+        @foreach (string Facials in ViewBag.AppropriateFacials)
+        {
+            <li>@Facials</li>
+        }
     </ul>
 
     <h5>Nail Services</h5>
-    // TODO: display a description for the nail service selected
-    
+    @if (ViewBag.maniPedi == "manicure")
+    {
+        <p>@ViewBag.maniDescription</p>
+    }
+    @if (ViewBag.maniPedi == "pedicure")
+    {
+        <p>@ViewBag.pediDescription</p>
+    }
+    @if (ViewBag.maniPedi == "both")
+    {
+        <p>@ViewBag.maniDescription</p>
+        <p>@ViewBag.pediDescription</p>
+    }
+
+</div>
+
+<div id="squareBox">
+    <div class="polishSquare blue"></div>
+    <div class="polishSquare green"></div>
+    <div class="polishSquare orange"></div>
+    <div class="polishSquare pink"></div>
 </div>

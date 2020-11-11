@@ -3,7 +3,7 @@
 *@
 @{
 }
-<form method='post'>
+<form method='post' action="/spa/profile">
 
     Name:
     <br>
@@ -25,9 +25,27 @@
     <select name='manipedi'>
         <option value='manicure'>Manicure</option>    
         <option value='pedicure'>Pedicure</option>      
+        <option value='both'>Both</option>      
     </select>
     <br>
     
-    <input type='submit' value='Submit'>    
+    Color?
+    <br>    
+    <select name='polishColor'>
+        <option value='blue' style="background-color: blue"></option>    
+        <option value='green' style="background-color: green"></option>    
+        <option value='darkOrange' style="background-color: darkorange"></option>    
+             
+    </select>
+    <br>
+    
+    <input type='submit' value='Submit' >    
      
 </form>
+
+<div id="squareBox">
+    <div class="polishSquare blue"></div>
+    <div class="polishSquare green"></div>
+    <div class="polishSquare orange"></div>
+    <div class="polishSquare pink"></div>
+</div>
