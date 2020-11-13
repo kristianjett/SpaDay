@@ -1,0 +1,25 @@
+﻿<h1>Welcome!</h1>
+
+<h2>Add a new user:</h2>
+
+@if (ViewBag.error != null)
+{<p>@ViewBag.error</p>}
+
+<form method="post" action="/user">
+
+    @if (ViewBag.error == null)
+    {
+        <input type="text" name="username" placeholder="Username" />
+        <input type="email" name="email" placeholder="Email" />
+    }
+    else
+    {
+        <input type="text" name="username" value="@ViewBag.username" />
+        <input type="email" name="email" value="@ViewBag.email" />
+    }
+    <input type="password" name="password" placeholder="Password" />
+    <input type="password" name="verify" placeholder="Verify Password" />
+    <input type="submit" value="Submit" />
+</form>
+
+
